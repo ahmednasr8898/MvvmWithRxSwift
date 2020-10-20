@@ -11,7 +11,6 @@ target 'MvvmWithRxSwift' do
   #Alamofire
   pod 'Alamofire', '~> 5.2'
   pod 'Kingfisher', '~> 5.0'
-  
   #for indicator
   pod 'MBProgressHUD', '~> 1.2.0'
   # Pods for MvvmWithRxSwift

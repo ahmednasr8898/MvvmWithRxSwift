@@ -14,7 +14,8 @@ class LoginViewModel{
     var emailBehavior = BehaviorRelay<String>(value: "")
     var passwordBehavior = BehaviorRelay<String>(value: "")
     var loadingBehavior = BehaviorRelay<Bool>(value: false)
-    
+    var isFoundCurrentUser = BehaviorRelay<Bool>(value: false)
+
     private var responseSubject = PublishSubject<LoginModel>()
     var responseObservable: Observable<LoginModel>{
         return responseSubject
@@ -45,6 +46,13 @@ class LoginViewModel{
             }else{
                 return false
             }
+        }
+    }
+    func checkAtCurrentUser(){
+        if Helper.getApiToken() != nil{
+            isFoundCurrentUser.accept(true)
+        }else{
+            isFoundCurrentUser.accept(false)
         }
     }
     func login(){

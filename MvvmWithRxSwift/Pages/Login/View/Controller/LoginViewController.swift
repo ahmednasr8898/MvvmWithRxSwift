@@ -22,12 +22,20 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        subscribeToCurrentUser()
         bindTextField()
         subscribeToVaild()
         subscribeToLoadingData()
         subscribeToResponseData()
         subscribeToLoginPress()
         subscribeToRegister()
+    }
+    func subscribeToCurrentUser(){
+        loginViewModel.checkAtCurrentUser();        loginViewModel.isFoundCurrentUser.subscribe { (x:Bool) in
+            if x {
+                self.goToHomePage()
+            }
+        }.disposed(by: disposeBag)
     }
     func bindTextField(){
         emailTextField.rx.text.orEmpty.bind(to: loginViewModel.emailBehavior).disposed(by: disposeBag)
