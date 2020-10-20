@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uqO-Zg-uQK">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="MvvmWithRxSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="EsV-4j-Tca">
+                                <rect key="frame" x="20" y="371" width="374" height="154"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Put email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gRI-Za-VQw">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Z2p-Mn-Glf"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Put password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dk7-eV-R7m">
+                                        <rect key="frame" x="0.0" y="58" width="374" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Lia-XK-bri"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iue-Vw-CIm">
+                                        <rect key="frame" x="50" y="116" width="274" height="38"/>
+                                        <color key="backgroundColor" systemColor="linkColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <state key="normal" title="Login">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <state key="disabled">
+                                            <color key="titleColor" systemColor="opaqueSeparatorColor"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Iue-Vw-CIm" secondAttribute="trailing" constant="50" id="8Pg-Da-g7I"/>
+                                    <constraint firstAttribute="trailing" secondItem="gRI-Za-VQw" secondAttribute="trailing" id="WzD-fu-qWi"/>
+                                    <constraint firstItem="gRI-Za-VQw" firstAttribute="leading" secondItem="EsV-4j-Tca" secondAttribute="leading" id="cWj-Tl-0xc"/>
+                                    <constraint firstItem="dk7-eV-R7m" firstAttribute="leading" secondItem="EsV-4j-Tca" secondAttribute="leading" id="fbA-rg-Mgp"/>
+                                    <constraint firstItem="Iue-Vw-CIm" firstAttribute="leading" secondItem="EsV-4j-Tca" secondAttribute="leading" constant="50" id="hcM-2S-xBQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="dk7-eV-R7m" secondAttribute="trailing" id="mYA-24-hC5"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uxi-31-kfC">
+                                <rect key="frame" x="20" y="560" width="163" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="bMn-sa-QFO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="create new account!">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="uxi-31-kfC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="DZu-3K-Etm"/>
+                            <constraint firstItem="EsV-4j-Tca" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Svf-no-DJW"/>
+                            <constraint firstItem="EsV-4j-Tca" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ddL-32-djQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EsV-4j-Tca" secondAttribute="trailing" constant="20" id="npD-WE-rpm"/>
+                            <constraint firstItem="EsV-4j-Tca" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="oM0-kM-gOe"/>
+                            <constraint firstItem="uxi-31-kfC" firstAttribute="top" secondItem="EsV-4j-Tca" secondAttribute="bottom" constant="35" id="tsV-kP-zmX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Login" id="EbO-kC-uJW"/>
+                    <connections>
+                        <outlet property="LoginButton" destination="Iue-Vw-CIm" id="nzc-xT-p2u"/>
+                        <outlet property="emailTextField" destination="gRI-Za-VQw" id="Xuw-OL-Vab"/>
+                        <outlet property="passwordTextField" destination="dk7-eV-R7m" id="O77-fl-YgY"/>
+                        <outlet property="registerButton" destination="uxi-31-kfC" id="LKE-FG-u1d"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1050.7246376811595" y="65.625"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="26w-Ig-7e5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uqO-Zg-uQK" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hhW-Y2-dde">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="0.34425050629999998" blue="0.129872813" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="zUR-ai-B0M"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bPF-Cy-48A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140.57971014492756" y="65.625"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
